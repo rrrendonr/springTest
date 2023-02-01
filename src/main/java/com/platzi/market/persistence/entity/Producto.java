@@ -3,6 +3,7 @@ package com.platzi.market.persistence.entity;
 import jakarta.persistence.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "productos")
