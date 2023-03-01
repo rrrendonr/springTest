@@ -36,7 +36,8 @@ public class Security {
                 .authorizeHttpRequests().requestMatchers("/**/auth").permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().addFilterBefore(jwtFilterRequest, UsernamePasswordAuthenticationFilter.class)
+                .and().addFilterBefore(jwtFilterRequest, UsernamePasswordAuthenticationFilter.class).formLogin()
+                .and()
                 .build();
     }
 
